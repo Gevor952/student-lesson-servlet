@@ -9,40 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d3e2c10-f7d0-4f09-8f1e-f9d44a2ba515" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/db/DBConnectionProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/Lessons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/Students.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/service/LessonsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/service/StudentsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/AddLessonsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/AddStudentsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/DeleteLessonsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/DeleteStudentsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/EditeLessonsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/EditeStudentsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/LessonsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/StudentsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/util/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/addLessons.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/addStudents.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/deleteLessons.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/deleteStudents.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/editeLessons.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/editeStudents.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lessons.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/students.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/style/style1.css" afterDir="false" />
+    <list default="true" id="1d3e2c10-f7d0-4f09-8f1e-f9d44a2ba515" name="Changes" comment=".">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/students.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,12 +195,33 @@
       <workItem from="1731682822469" duration="538000" />
       <workItem from="1731683383362" duration="2992000" />
       <workItem from="1731686457581" duration="1758000" />
-      <workItem from="1731688259928" duration="13626000" />
+      <workItem from="1731688259928" duration="14103000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1731705129925</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731705129925</updated>
+    </task>
+    <task id="LOCAL-00002" summary=".">
+      <option name="closed" value="true" />
+      <created>1731705228883</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731705228883</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
