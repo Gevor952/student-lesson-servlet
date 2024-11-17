@@ -1014,7 +1014,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="294" parent="1" name="student-lesson-servlet">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-11-15.07:01:11</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-11-17.09:06:22</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="295" parent="1" name="sys">
@@ -1047,7 +1047,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="302" parent="300" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
@@ -1077,7 +1077,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="308" parent="301" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>5</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
@@ -1099,21 +1099,27 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="313" parent="301" name="students_ibfk_1">
+    <foreign-key id="313" parent="301" name="students">
+      <ColNames>lessons_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>lessons</RefTableName>
+    </foreign-key>
+    <foreign-key id="314" parent="301" name="students_ibfk_1">
       <ColNames>lessons_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>lessons</RefTableName>
     </foreign-key>
-    <index id="314" parent="301" name="PRIMARY">
+    <index id="315" parent="301" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="315" parent="301" name="lessons_id">
+    <index id="316" parent="301" name="students">
       <ColNames>lessons_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="316" parent="301" name="PRIMARY">
+    <key id="317" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
