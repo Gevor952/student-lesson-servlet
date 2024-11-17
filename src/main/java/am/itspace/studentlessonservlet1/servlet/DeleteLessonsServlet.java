@@ -1,5 +1,6 @@
 package am.itspace.studentlessonservlet1.servlet;
 
+import am.itspace.studentlessonservlet1.exception.NotFindLessonsException;
 import am.itspace.studentlessonservlet1.service.LessonsService;
 
 import javax.servlet.ServletException;
@@ -18,7 +19,13 @@ public class DeleteLessonsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
-        lessonsService.delete(id);
+        if(lessonsService.getLessonById(id) == null) {
+            throw new NotFindLessonsException("id is not found");
+        }
+        else {
+            lessonsService.delete(id);
+        }
+
         resp.sendRedirect("lessons");
     }
 }

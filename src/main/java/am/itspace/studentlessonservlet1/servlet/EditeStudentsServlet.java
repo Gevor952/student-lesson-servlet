@@ -1,5 +1,6 @@
 package am.itspace.studentlessonservlet1.servlet;
 
+import am.itspace.studentlessonservlet1.exception.NotFindStudentsException;
 import am.itspace.studentlessonservlet1.model.Lessons;
 import am.itspace.studentlessonservlet1.model.Students;
 import am.itspace.studentlessonservlet1.service.LessonsService;
@@ -35,13 +36,18 @@ public class EditeStudentsServlet extends HttpServlet {
         String surname = req.getParameter("surname");
         int age = Integer.parseInt(req.getParameter("age"));
         Lessons lesson = lessonsService.getLessonById(Integer.parseInt(req.getParameter("lessons")));
-        studentsService.update(Students.builder()
-                .id(id)
-                .name(name)
-                .surname(surname)
-                .age(age)
-                .lesson(lesson)
-                .build());
+        if(studentsService.getById(id) == null) {
+            throw new NotFindStudentsException("Student not found");
+        }else {
+            studentsService.update(Students.builder()
+                    .id(id)
+                    .name(name)
+                    .surname(surname)
+                    .age(age)
+                    .lesson(lesson)
+                    .build());
+        }
+
         resp.sendRedirect("students");
     }
 }

@@ -1,5 +1,6 @@
 package am.itspace.studentlessonservlet1.servlet;
 
+import am.itspace.studentlessonservlet1.exception.NotFindStudentsException;
 import am.itspace.studentlessonservlet1.service.StudentsService;
 
 import javax.servlet.ServletException;
@@ -17,7 +18,13 @@ public class DeleteStudentsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
-        studentsService.delete(id);
+
+        if (studentsService.getById(id) == null) {
+            throw new NotFindStudentsException("Student not found");
+        } else {
+            studentsService.delete(id);
+        }
+
         resp.sendRedirect("students");
     }
 }

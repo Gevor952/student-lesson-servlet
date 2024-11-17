@@ -1,5 +1,6 @@
 package am.itspace.studentlessonservlet1.servlet;
 
+import am.itspace.studentlessonservlet1.exception.NotFindLessonsException;
 import am.itspace.studentlessonservlet1.model.Lessons;
 import am.itspace.studentlessonservlet1.service.LessonsService;
 import am.itspace.studentlessonservlet1.util.DateUtil;
@@ -34,7 +35,13 @@ public class EditeLessonsServlet extends HttpServlet {
         String lName = req.getParameter("name");
         Time time = new Time(DateUtil.timeForDate(req.getParameter("time")).getTime());
         double price = Double.parseDouble(req.getParameter("price"));
-        lessonsService.update(new Lessons(id, time, lName, price));
+
+        if(lessonsService.getLessonById(id) == null) {
+            throw new NotFindLessonsException("lesson not found");
+        }else {
+            lessonsService.update(new Lessons(id, time, lName, price));
+        }
+
         resp.sendRedirect("lessons");
     }
 
