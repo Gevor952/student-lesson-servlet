@@ -1,6 +1,8 @@
 package am.itspace.studentlessonservlet1.servlet;
 
 import am.itspace.studentlessonservlet1.model.Students;
+import am.itspace.studentlessonservlet1.model.User;
+import am.itspace.studentlessonservlet1.model.UserType;
 import am.itspace.studentlessonservlet1.service.StudentsService;
 
 import javax.servlet.ServletException;
@@ -18,8 +20,15 @@ public class StudentsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Students> students = studentsService.getAll();
-        req.setAttribute("students", students);
-        req.getRequestDispatcher("students.jsp").forward(req, resp);
+        if(((User)req.getSession().getAttribute("user")).getUserType() == UserType.ADMIN){
+            List<Students> students = studentsService.getAll();
+            req.setAttribute("students", students);
+            req.getRequestDispatcher("/WEB-INF/students.jsp").forward(req, resp);
+        }else if(((User)req.getSession().getAttribute("user")).getUserType() == UserType.USER){
+            List<Students> students = studentsService.getAllByUserId(((User)req.getSession().getAttribute("user")).getId());
+            req.setAttribute("students", students);
+            req.getRequestDispatcher("/WEB-INF/students.jsp").forward(req, resp);
+        }
+
     }
 }

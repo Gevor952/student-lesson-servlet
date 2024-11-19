@@ -10,19 +10,25 @@
 <html>
 <head>
     <title>Title</title>
-  <link rel="stylesheet" href="style/style1.css">
+  <style>
+    <%@include file="../style/style2.css"%>
+  </style>
 </head>
 <body>
 <nav></nav>
 <div class="main_div">
   <h1>add_students</h1>
   <div class="buts">
-    <a href="index.jsp" class="a_but"><p>home</p></a>
-    <a href="students" class="a_but"><p>students</p></a>
+    <a href="/" class="a_but"><p>home</p></a>
+    <a href="/students" class="a_but"><p>students</p></a>
   </div>
+  <%if(request.getAttribute("msg") != null){%>
+      <p style="color: red"><%=request.getAttribute("msg")%></p>
+  <%}%>
   <form action="addStudents" method="post" id="form_2">
     <input type="text" name="name" placeholder="name">
     <input type="text" name="surname" placeholder="surname">
+    <input type="email" name="email", placeholder="email">
     <input type="number" name="age" placeholder="age">
     <%List<Lessons> lessons = (List<Lessons>) request.getAttribute("lessons");%>
     Lecture_name:<select name="lessons">

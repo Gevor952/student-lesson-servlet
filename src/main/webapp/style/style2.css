@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -33,6 +34,7 @@ nav{
 
 
 .a_but{
+    background: white;
     margin: 0 0 0 20px;
 
 }
@@ -110,3 +112,20 @@ input:focus{
     width: 120px;
     height: 32px;
 }
+
+#singin{
+    position: absolute;
+}
+#singin p{
+    margin: 0;
+}
+
+#registration{
+    background: white;
+}
+
+#registration p{
+    background: white;
+    margin: 0;
+}
+

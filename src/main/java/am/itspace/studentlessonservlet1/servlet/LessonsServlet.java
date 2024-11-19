@@ -1,6 +1,8 @@
 package am.itspace.studentlessonservlet1.servlet;
 
 import am.itspace.studentlessonservlet1.model.Lessons;
+import am.itspace.studentlessonservlet1.model.User;
+import am.itspace.studentlessonservlet1.model.UserType;
 import am.itspace.studentlessonservlet1.service.LessonsService;
 
 import javax.servlet.ServletException;
@@ -19,8 +21,15 @@ public class LessonsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Lessons> lessons = lessonsService.getAllLessons();
-        req.setAttribute("lessons", lessons);
-        req.getRequestDispatcher("lessons.jsp").forward(req, resp);
+
+        if(((User)req.getSession().getAttribute("user")).getUserType() == UserType.ADMIN) {
+            List<Lessons> lessons = lessonsService.getAllLessons();
+            req.setAttribute("lessons", lessons);
+            req.getRequestDispatcher("/WEB-INF/lessons.jsp").forward(req, resp);
+        }else if(((User)req.getSession().getAttribute("user")).getUserType() == UserType.USER) {
+            List<Lessons> lessons = lessonsService.getLessonsByUserId(((User)req.getSession().getAttribute("user")).getId());
+            req.setAttribute("lessons", lessons);
+            req.getRequestDispatcher("/WEB-INF/lessons.jsp").forward(req, resp);
+        }
     }
 }

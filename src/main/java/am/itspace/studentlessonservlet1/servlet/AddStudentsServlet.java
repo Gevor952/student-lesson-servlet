@@ -2,6 +2,7 @@ package am.itspace.studentlessonservlet1.servlet;
 
 import am.itspace.studentlessonservlet1.model.Lessons;
 import am.itspace.studentlessonservlet1.model.Students;
+import am.itspace.studentlessonservlet1.model.User;
 import am.itspace.studentlessonservlet1.service.LessonsService;
 import am.itspace.studentlessonservlet1.service.StudentsService;
 
@@ -23,7 +24,7 @@ public class AddStudentsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Lessons> lessons = lessonsService.getAllLessons();
         req.setAttribute("lessons", lessons);
-        req.getRequestDispatcher("addStudents.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/addStudents.jsp").forward(req, resp);
     }
 
     @Override
@@ -31,14 +32,25 @@ public class AddStudentsServlet extends HttpServlet {
         int lessonId = Integer.parseInt(req.getParameter("lessons"));
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
+        String email = req.getParameter("email");
         int age = Integer.parseInt(req.getParameter("age"));
         Lessons lessons =lessonsService.getLessonById(lessonId);
-        studentsService.add(Students.builder()
-                        .name(name)
-                        .surname(surname)
-                        .age(age)
-                        .lesson(lessons)
-                        .build());
-        resp.sendRedirect("students");
+        if(studentsService.getAllByEmail(email, ((User)req.getSession().getAttribute("user")).getId())) {
+            studentsService.add(Students.builder()
+                    .name(name)
+                    .surname(surname)
+                    .email(email)
+                    .age(age)
+                    .lesson(lessons)
+                    .user((User) req.getSession().getAttribute("user"))
+                    .build());
+            resp.sendRedirect("/students");
+        } else {
+            List<Lessons> lessons1 = lessonsService.getAllLessons();
+            req.setAttribute("lessons", lessons1);
+            req.setAttribute("msg", "This email already exists");
+            req.getRequestDispatcher("/WEB-INF/addStudents.jsp").forward(req, resp);
+        }
+
     }
 }

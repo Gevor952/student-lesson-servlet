@@ -27,7 +27,7 @@ public class EditeStudentsServlet extends HttpServlet {
         List<Lessons> lessons = lessonsService.getAllLessons();
         req.setAttribute("students", students);
         req.setAttribute("lessons", lessons);
-        req.getRequestDispatcher("editeStudents.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/editeStudents.jsp").forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -48,6 +48,6 @@ public class EditeStudentsServlet extends HttpServlet {
                     .build());
         }
 
-        resp.sendRedirect("students");
+        resp.sendRedirect("/students");
     }
 }

@@ -11,7 +11,9 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="style/style1.css">
+    <style>
+        <%@include file="../style/style2.css"%>
+    </style>
 </head>
 <body>
 <%Students student = (Students) request.getAttribute("students");%>
@@ -19,8 +21,8 @@
 <div class="main_div">
     <h1>add_students</h1>
     <div class="buts">
-        <a href="index.jsp" class="a_but"><p>home</p></a>
-        <a href="students" class="a_but"><p>students</p></a>
+        <a href="/" class="a_but"><p>home</p></a>
+        <a href="/students" class="a_but"><p>students</p></a>
     </div>
     <form action="editeStudents" method="post" id="form_2">
         <input type="hidden" name="id" value="<%=student.getId()%>">

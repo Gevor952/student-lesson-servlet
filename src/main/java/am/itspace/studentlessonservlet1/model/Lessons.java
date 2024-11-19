@@ -17,5 +17,6 @@ public class Lessons {
     Date duration;
     String lecturerName;
     double price;
+    User user;
 
 }

@@ -26,6 +26,6 @@ public class DeleteLessonsServlet extends HttpServlet {
             lessonsService.delete(id);
         }
 
-        resp.sendRedirect("lessons");
+        resp.sendRedirect("/");
     }
 }

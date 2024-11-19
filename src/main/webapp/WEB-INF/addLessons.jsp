@@ -9,17 +9,21 @@
 <html>
 <head>
     <title>Title</title>
-  <link rel="stylesheet" href="style/style1.css">
+    <style>
+        <%@include file="../style/style2.css"%>
+    </style>
 </head>
 <body>
 <nav></nav>
 <div class="main_div">
     <h1>add_lesson</h1>
     <div class="buts">
-        <a href="index.jsp" class="a_but"><p>home</p></a>
-        <a href="lessons" class="a_but"><p>lessons</p></a>
+        <a href="/" class="a_but"><p>home</p></a>
+        <a href="/lessons" class="a_but"><p>lessons</p></a>
     </div>
-
+    <%if(request.getAttribute("msg") != null){%>
+        <p style="color: red"><%=request.getAttribute("msg")%></p>
+    <%}%>
     <form id="form_1" action="addLessons" method="post">
         <input type="text" placeholder="name" name="name">
         <input type="time" name="time">

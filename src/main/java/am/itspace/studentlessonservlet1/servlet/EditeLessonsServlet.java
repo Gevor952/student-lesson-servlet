@@ -2,6 +2,7 @@ package am.itspace.studentlessonservlet1.servlet;
 
 import am.itspace.studentlessonservlet1.exception.NotFindLessonsException;
 import am.itspace.studentlessonservlet1.model.Lessons;
+import am.itspace.studentlessonservlet1.model.User;
 import am.itspace.studentlessonservlet1.service.LessonsService;
 import am.itspace.studentlessonservlet1.util.DateUtil;
 
@@ -24,7 +25,7 @@ public class EditeLessonsServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
         Lessons lesson = lessonsService.getLessonById(id);
         req.setAttribute("lesson", lesson);
-        req.getRequestDispatcher("editeLessons.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/editeLessons.jsp").forward(req, resp);
 
     }
 
@@ -39,10 +40,10 @@ public class EditeLessonsServlet extends HttpServlet {
         if(lessonsService.getLessonById(id) == null) {
             throw new NotFindLessonsException("lesson not found");
         }else {
-            lessonsService.update(new Lessons(id, time, lName, price));
+            lessonsService.update(new Lessons(id, time, lName, price, (User) req.getSession().getAttribute("user")));
         }
 
-        resp.sendRedirect("lessons");
+        resp.sendRedirect("/lessons");
     }
 
 }
