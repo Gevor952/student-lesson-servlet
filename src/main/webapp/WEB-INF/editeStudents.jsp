@@ -28,6 +28,7 @@
         <input type="hidden" name="id" value="<%=student.getId()%>">
         <input type="text" name="name" placeholder="name" value="<%=student.getName()%>">
         <input type="text" name="surname" placeholder="surname" value="<%=student.getSurname()%>">
+        <input type="email" name="email" placeholder="email" value="<%=student.getEmail()%>">
         <input type="number" name="age" placeholder="age" value="<%=student.getAge()%>">
         <%List<Lessons> lessons = (List<Lessons>) request.getAttribute("lessons");%>
         Lecture_name:<select name="lessons">

@@ -10,42 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d3e2c10-f7d0-4f09-8f1e-f9d44a2ba515" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/filter/UserFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/UserType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/MainServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/UserLoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/UserLogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/UserRegistrationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f314a4b0-c537-4062-95ec-f397399e177f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f314a4b0-c537-4062-95ec-f397399e177f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/Lessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/Lessons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/model/Students.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/service/LessonsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/service/LessonsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/service/StudentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/service/StudentsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/AddLessonsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/AddLessonsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/AddStudentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/AddStudentsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/DeleteLessonsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/DeleteLessonsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/DeleteStudentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/DeleteStudentsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/EditeLessonsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/EditeLessonsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/EditeStudentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/EditeStudentsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/LessonsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/LessonsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/StudentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/am/itspace/studentlessonservlet1/servlet/StudentsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addLessons.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addLessons.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addStudents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addStudents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteLessons.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/deleteLessons.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/deleteStudents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/deleteStudents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editeLessons.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editeLessons.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editeStudents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editeStudents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/lessons.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lessons.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/students.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/students.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/style/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/style/style2.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +225,8 @@
       <workItem from="1731956416142" duration="1673000" />
       <workItem from="1732016781819" duration="2558000" />
       <workItem from="1732019360593" duration="512000" />
-      <workItem from="1732025750254" duration="27251000" />
+      <workItem from="1732025750254" duration="27490000" />
+      <workItem from="1732093759192" duration="350000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -292,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731860300016</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".">
+      <option name="closed" value="true" />
+      <created>1732054212222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732054212222</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

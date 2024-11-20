@@ -144,10 +144,10 @@ public class StudentsService {
                         .email(rs.getString(4))
                         .age(rs.getInt(5))
                         .lesson(Lessons.builder()
-                                .id(rs.getInt(7))
-                                .duration(DateUtil.timeForDate(rs.getString(8)))
-                                .lecturerName(rs.getString(9))
-                                .price(rs.getDouble(10))
+                                .id(rs.getInt(8))
+                                .duration(DateUtil.timeForDate(rs.getString(9)))
+                                .lecturerName(rs.getString(10))
+                                .price(rs.getDouble(11))
                                 .build())
                         .build();
             }

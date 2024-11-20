@@ -43,6 +43,7 @@ public class EditeStudentsServlet extends HttpServlet {
                     .id(id)
                     .name(name)
                     .surname(surname)
+                    .email(req.getParameter("email"))
                     .age(age)
                     .lesson(lesson)
                     .build());
