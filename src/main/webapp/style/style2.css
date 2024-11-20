@@ -129,3 +129,11 @@ input:focus{
     margin: 0;
 }
 
+
+#logout{
+    position: absolute;
+}
+
+#logout p{
+    margin: 0;
+}

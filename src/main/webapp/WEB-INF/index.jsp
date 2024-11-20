@@ -16,7 +16,7 @@
     <%if (session.getAttribute("user") == null){%>
     <a href="/login" class="a_but" id="singin"><p>singin</p></a>
     <%} else {%>
-    <a href="/logout" class="a_but"><p>logout</p></a>
+    <a href="/logout" class="a_but" id="logout"><p>logout</p></a>
     <% }%>
   </nav>
   <div class="main_div" id="tlg">
